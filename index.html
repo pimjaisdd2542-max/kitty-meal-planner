@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitty Meal Planner Ultimate</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎀 Dashboard</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>🎀 Kitty Meal Planner Ultimate</h1>
+<div class="sidebar-layout">
 
-        <p>Hello Pimpjai 💕</p>
+    <aside class="sidebar">
 
-        <div id="foods"></div>
-    </div>
+        <div class="logo">
+            🎀 Kitty Planner
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase.js"></script>
-    <script src="app.js"></script>
-    
+        <nav class="menu">
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="foods.html">🍱 Foods</a>
+            <a href="planner.html">📅 Planner</a>
+            <a href="settings.html">⚙️ Settings</a>
+        </nav>
+
+    </aside>
+
+    <main class="page-content">
+
+        <h1 class="page-title">
+            Good Morning ☀️
+        </h1>
+
+        <div class="dashboard-grid">
+
+            <div class="stat-card">
+                <h3>🍱 Foods</h3>
+                <div class="value" id="foodCount">0</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>❤️ Favorites</h3>
+                <div class="value" id="favoriteCount">0</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>📅 Today</h3>
+                <div class="value" id="todayCount">0</div>
+            </div>
+
+            <div class="stat-card">
+                <h3>🔥 Tomorrow</h3>
+                <div class="value" id="tomorrowCount">0</div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="dashboard.js"></script>
 
 </body>
 </html>
