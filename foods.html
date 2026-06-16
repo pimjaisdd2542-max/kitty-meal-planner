@@ -38,7 +38,43 @@
             placeholder="🔍 ค้นหาเมนูอาหาร..."
         >
 
-        <div id="foods"></div>
+        <div class="add-food-card">
+
+    <h2>➕ เพิ่มเมนูอาหาร</h2>
+
+    <div class="form-grid">
+
+        <input id="foodName" placeholder="ชื่ออาหาร">
+
+        <input id="foodCalories" type="number" placeholder="Calories">
+
+        <input id="foodProtein" type="number" placeholder="Protein">
+
+        <input id="foodCarb" type="number" placeholder="Carb">
+
+        <input id="foodFat" type="number" placeholder="Fat">
+
+        <input id="foodCategory" placeholder="Category">
+
+        <input id="foodMealType" placeholder="Meal Type">
+
+        <input id="foodPrepTime" placeholder="Prep Time">
+
+        <input id="foodDifficulty" placeholder="Difficulty">
+
+        <input id="foodImage" type="file">
+
+    </div>
+
+    <button
+        class="primary-btn"
+        onclick="addFood()">
+        Save Food
+    </button>
+
+</div>
+
+<div id="foods"></div>
 
     </main>
 
