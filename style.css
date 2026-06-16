@@ -158,3 +158,44 @@ body{
         padding:15px;
     }
 }
+.add-food-card{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:12px;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #eee;
+    border-radius:12px;
+}
+
+.primary-btn{
+    border:none;
+    background:#ff4fa3;
+    color:white;
+    padding:12px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    margin-top:12px;
+}
+
+.favorite-btn{
+    border:none;
+    background:#fff0f6;
+    padding:10px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:10px;
+}
