@@ -215,14 +215,12 @@ async function addFood(){
             .value,
 
         prep_time:
-            document
-            .getElementById("foodPrepTime")
-            .value,
+    document.getElementById("foodPrepTime").value
+        ? Number(document.getElementById("foodPrepTime").value)
+        : null,
 
         difficulty:
-            document
-            .getElementById("foodDifficulty")
-            .value,
+    document.getElementById("foodDifficulty").value || null,
 
         image_url:
             imageUrl
