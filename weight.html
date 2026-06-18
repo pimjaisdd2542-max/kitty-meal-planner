@@ -1,31 +1,179 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍱 Food Library</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>⚖ Weight Tracker</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <div class="container">
+<div class="sidebar-layout">
 
-        <h1>🍱 Food Library</h1>
+    <!-- Sidebar -->
 
-        <input
-            type="text"
-            id="searchFood"
-            placeholder="🔍 ค้นหาเมนูอาหาร..."
-        >
+    <aside class="sidebar">
 
-        <div id="foods"></div>
+        <div class="logo">
 
-    </div>
+            🎀 Kitty Planner
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase.js"></script>
-    <script src="app.js"></script>
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="foods.html">
+                🍱 Foods
+            </a>
+
+            <a href="planner.html">
+                📅 Planner
+            </a>
+
+            <a href="roulette.html">
+                🎡 Roulette
+            </a>
+
+            <a href="weight.html" class="active">
+                ⚖ Weight
+            </a>
+
+            <a href="tdee.html">
+                🔥 TDEE
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="page-content">
+
+        <h1>
+
+            ⚖ Weight Tracker
+
+        </h1>
+
+        <p class="welcome">
+
+            บันทึกน้ำหนักประจำวัน
+
+        </p>
+
+        <!-- Add Weight -->
+
+        <div class="section-card">
+
+            <h2>
+
+                ➕ เพิ่มน้ำหนัก
+
+            </h2>
+
+            <input
+                type="date"
+                id="recordDate">
+
+            <input
+                type="number"
+                id="weightInput"
+                step="0.1"
+                placeholder="เช่น 58.4">
+
+            <button id="saveWeight">
+
+                💾 บันทึกน้ำหนัก
+
+            </button>
+
+        </div>
+
+        <!-- Summary -->
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <h3>
+
+                    ⚖ ล่าสุด
+
+                </h3>
+
+                <div
+                    class="dashboard-number"
+                    id="latestWeight">
+
+                    -
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>
+
+                    📈 ครั้งที่บันทึก
+
+                </h3>
+
+                <div
+                    class="dashboard-number"
+                    id="totalRecords">
+
+                    0
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- History -->
+
+        <div class="section-card">
+
+            <h2>
+
+                📋 ประวัติน้ำหนัก
+
+            </h2>
+
+            <div id="weightHistory">
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="weight.js"></script>
 
 </body>
+
 </html>
