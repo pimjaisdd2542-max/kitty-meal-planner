@@ -225,8 +225,8 @@ function renderTodayMeals(){
 
 // หากยังไม่มีการตั้งค่า TDEE
 // จะใช้ค่า Default ไปก่อน
-const DEFAULT_CALORIES_GOAL = 1800;
-const DEFAULT_PROTEIN_GOAL = 120;
+const DEFAULT_CALORIES_GOAL = 1600;
+const DEFAULT_PROTEIN_GOAL = 70;
 
 
 // =====================================================
