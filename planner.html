@@ -3,31 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍱 Food Library</title>
-    <h1>📅 Planner</h1>
-<p>Coming Soon...</p>
+    <title>📅 Planner | Kitty Meal Planner</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+<div class="sidebar-layout">
 
-        <h1>🍱 Food Library</h1>
+    <aside class="sidebar">
 
-        <input
-            type="text"
-            id="searchFood"
-            placeholder="🔍 ค้นหาเมนูอาหาร..."
-        >
+        <div class="logo">
+            🎀 Kitty Planner
+        </div>
 
-        <div id="foods"></div>
+        <nav class="menu">
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="foods.html">🍱 Foods</a>
+            <a href="planner.html" class="active">📅 Planner</a>
+            <a href="roulette.html">🎡 Roulette</a>
+            <a href="weight.html">⚖ Weight</a>
+            <a href="tdee.html">🔥 TDEE</a>
+            <a href="settings.html">⚙ Settings</a>
+        </nav>
 
-    </div>
+    </aside>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase.js"></script>
-    <script src="app.js"></script>
+    <main class="page-content">
+
+        <h1>📅 Weekly Meal Planner</h1>
+
+        <div class="planner-toolbar">
+
+            <input type="date" id="planDate">
+
+            <button id="loadFoodsBtn">
+                โหลดเมนู
+            </button>
+
+        </div>
+
+        <div class="planner-section">
+
+            <div class="planner-left">
+
+                <h2>🍱 Food Library</h2>
+
+                <input
+                    type="text"
+                    id="searchFood"
+                    placeholder="ค้นหาเมนู..."
+                >
+
+                <div id="foodList"></div>
+
+            </div>
+
+            <div class="planner-right">
+
+                <h2>📝 Today's Plan</h2>
+
+                <div class="meal-block">
+
+                    <h3>🌞 Breakfast</h3>
+                    <div id="breakfast"></div>
+
+                </div>
+
+                <div class="meal-block">
+
+                    <h3>🍛 Lunch</h3>
+                    <div id="lunch"></div>
+
+                </div>
+
+                <div class="meal-block">
+
+                    <h3>🍲 Dinner</h3>
+                    <div id="dinner"></div>
+
+                </div>
+
+                <div class="meal-block">
+
+                    <h3>🍎 Snack</h3>
+                    <div id="snack"></div>
+
+                </div>
+
+                <div class="summary">
+
+                    <h2>Daily Summary</h2>
+
+                    <p>
+                        🔥 Calories :
+                        <span id="totalCalories">0</span>
+                    </p>
+
+                    <p>
+                        💪 Protein :
+                        <span id="totalProtein">0</span> g
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="planner.js"></script>
 
 </body>
 </html>
