@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎀 Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🎀 Kitty Meal Planner Ultimate</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
 <div class="sidebar-layout">
+
+    <!-- Sidebar -->
 
     <aside class="sidebar">
 
@@ -18,40 +25,221 @@
         </div>
 
         <nav class="menu">
-            <a href="index.html">🏠 Dashboard</a>
-            <a href="foods.html">🍱 Foods</a>
-            <a href="planner.html">📅 Planner</a>
-            <a href="settings.html">⚙️ Settings</a>
+
+            <a href="index.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="foods.html">
+                🍱 Foods
+            </a>
+
+            <a href="planner.html">
+                📅 Planner
+            </a>
+
+            <a href="roulette.html">
+                🎡 Roulette
+            </a>
+
+            <a href="weight.html">
+                ⚖ Weight
+            </a>
+
+            <a href="tdee.html">
+                🔥 TDEE
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
         </nav>
 
     </aside>
 
+    <!-- Main -->
+
     <main class="page-content">
 
-        <h1 class="page-title">
-            Good Morning ☀️
+        <h1>
+            🎀 Kitty Meal Planner Ultimate
         </h1>
+
+        <p class="welcome">
+
+            Hello Pimpjai 💕
+
+        </p>
+
+        <!-- Summary -->
 
         <div class="dashboard-grid">
 
-            <div class="stat-card">
-                <h3>🍱 Foods</h3>
-                <div class="value" id="foodCount">0</div>
+            <div class="dashboard-card">
+
+                <h3>🔥 Calories</h3>
+
+                <div
+                    class="dashboard-number"
+                    id="todayCalories">
+
+                    0
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        id="calorieProgress"
+                        class="progress-bar">
+
+                    </div>
+
+                </div>
+
+                <div id="calorieText">
+
+                    0 / 1800 kcal
+
+                </div>
+
             </div>
 
-            <div class="stat-card">
-                <h3>❤️ Favorites</h3>
-                <div class="value" id="favoriteCount">0</div>
+            <div class="dashboard-card">
+
+                <h3>💪 Protein</h3>
+
+                <div
+                    class="dashboard-number"
+                    id="todayProtein">
+
+                    0
+
+                </div>
+
+                <div class="progress">
+
+                    <div
+                        id="proteinProgress"
+                        class="progress-bar">
+
+                    </div>
+
+                </div>
+
+                <div id="proteinText">
+
+                    0 / 120 g
+
+                </div>
+
             </div>
 
-            <div class="stat-card">
-                <h3>📅 Today</h3>
-                <div class="value" id="todayCount">0</div>
+            <div class="dashboard-card">
+
+                <h3>🍞 Carb</h3>
+
+                <div
+                    class="dashboard-number"
+                    id="todayCarb">
+
+                    0
+
+                </div>
+
             </div>
 
-            <div class="stat-card">
-                <h3>🔥 Tomorrow</h3>
-                <div class="value" id="tomorrowCount">0</div>
+            <div class="dashboard-card">
+
+                <h3>🥑 Fat</h3>
+
+                <div
+                    class="dashboard-number"
+                    id="todayFat">
+
+                    0
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>🍽 Meals</h3>
+
+                <div
+                    class="dashboard-number"
+                    id="todayMeals">
+
+                    0
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>❤️ Favorite</h3>
+
+                <div
+                    class="dashboard-number"
+                    id="favoriteFoods">
+
+                    0
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Daily Status -->
+
+        <div class="status-card">
+
+            <h2>
+
+                📊 Today's Status
+
+            </h2>
+
+            <div id="dailyStatus">
+
+                Loading...
+
+            </div>
+
+        </div>
+
+        <!-- Today's Meal -->
+
+        <div class="section-card">
+
+            <h2>
+
+                🍱 Today's Meals
+
+            </h2>
+
+            <div id="todayFoodList">
+
+            </div>
+
+        </div>
+
+        <!-- Favorite -->
+
+        <div class="section-card">
+
+            <h2>
+
+                ❤️ Favorite Foods
+
+            </h2>
+
+            <div id="favoriteFoodList">
+
             </div>
 
         </div>
@@ -61,8 +249,11 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="supabase.js"></script>
+
 <script src="dashboard.js"></script>
 
 </body>
+
 </html>
