@@ -86,7 +86,7 @@ function renderFoods(data){
 
                 <button
                     class="favorite-btn"
-                    onclick="toggleFavorite(${food.id}, ${food.favorite})">
+                    onclick="toggleFavorite('${food.id}', ${food.favorite})">
 
                     ${food.favorite ? "❤️ Favorite" : "🤍 Favorite"}
 
@@ -121,16 +121,25 @@ function filterFoods(){
     renderFoods(filtered);
 }
 
-async function toggleFavorite(id,current){
+async function toggleFavorite(id, current){
 
-    await supabaseClient
+    const { error } = await supabaseClient
         .from("foods")
         .update({
             favorite: !current
         })
-        .eq("id",id);
+        .eq("id", id);
 
-    loadFoods();
+    if(error){
+
+        alert(error.message);
+        console.log(error);
+        return;
+
+    }
+
+    await loadFoods();
+
 }
 
 async function addFood(){
