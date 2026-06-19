@@ -1,31 +1,263 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍱 Food Library</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>🔥 TDEE Calculator</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <div class="container">
+<div class="sidebar-layout">
 
-        <h1>🍱 Food Library</h1>
+    <!-- Sidebar -->
 
-        <input
-            type="text"
-            id="searchFood"
-            placeholder="🔍 ค้นหาเมนูอาหาร..."
-        >
+    <aside class="sidebar">
 
-        <div id="foods"></div>
+        <div class="logo">
 
-    </div>
+            🎀 Kitty Planner
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase.js"></script>
-    <script src="app.js"></script>
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="foods.html">
+                🍱 Foods
+            </a>
+
+            <a href="planner.html">
+                📅 Planner
+            </a>
+
+            <a href="roulette.html">
+                🎡 Roulette
+            </a>
+
+            <a href="weight.html">
+                ⚖ Weight
+            </a>
+
+            <a href="tdee.html" class="active">
+                🔥 TDEE
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="page-content">
+
+        <h1>
+
+            🔥 TDEE Calculator
+
+        </h1>
+
+        <p class="welcome">
+
+            คำนวณพลังงานที่ร่างกายต้องใช้ต่อวัน
+
+        </p>
+
+        <!-- Form -->
+
+        <div class="section-card">
+
+            <h2>
+
+                📋 ข้อมูลร่างกาย
+
+            </h2>
+
+            <label>เพศ</label>
+
+            <select id="gender">
+
+                <option value="female">หญิง</option>
+
+                <option value="male">ชาย</option>
+
+            </select>
+
+            <label>อายุ (ปี)</label>
+
+            <input
+                type="number"
+                id="age"
+                placeholder="เช่น 28">
+
+            <label>ส่วนสูง (cm)</label>
+
+            <input
+                type="number"
+                id="height"
+                placeholder="เช่น 165">
+
+            <label>น้ำหนัก (kg)</label>
+
+            <input
+                type="number"
+                id="weight"
+                step="0.1"
+                placeholder="เช่น 58.5">
+
+            <label>กิจกรรม</label>
+
+            <select id="activity">
+
+                <option value="1.2">
+                    นั่งทำงาน ไม่ค่อยออกกำลังกาย
+                </option>
+
+                <option value="1.375">
+                    ออกกำลังกาย 1-3 วัน/สัปดาห์
+                </option>
+
+                <option value="1.55">
+                    ออกกำลังกาย 3-5 วัน/สัปดาห์
+                </option>
+
+                <option value="1.725">
+                    ออกกำลังกาย 6-7 วัน/สัปดาห์
+                </option>
+
+                <option value="1.9">
+                    นักกีฬา / ใช้แรงหนัก
+                </option>
+
+            </select>
+
+            <label>เป้าหมาย</label>
+
+            <select id="goal">
+
+                <option value="-500">
+                    ลดน้ำหนัก
+                </option>
+
+                <option value="0">
+                    คงน้ำหนัก
+                </option>
+
+                <option value="300">
+                    เพิ่มน้ำหนัก
+                </option>
+
+            </select>
+
+            <button id="calculateBtn">
+
+                🔥 คำนวณ TDEE
+
+            </button>
+
+        </div>
+
+        <!-- Result -->
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <h3>
+
+                    🔥 BMR
+
+                </h3>
+
+                <div
+                    class="dashboard-number"
+                    id="bmrResult">
+
+                    -
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>
+
+                    ⚡ TDEE
+
+                </h3>
+
+                <div
+                    class="dashboard-number"
+                    id="tdeeResult">
+
+                    -
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>
+
+                    🎯 เป้าหมาย
+
+                </h3>
+
+                <div
+                    class="dashboard-number"
+                    id="goalCalories">
+
+                    -
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section-card">
+
+            <h2>
+
+                📝 คำแนะนำ
+
+            </h2>
+
+            <div id="tdeeAdvice">
+
+                กรอกข้อมูลแล้วกด "คำนวณ TDEE"
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="tdee.js"></script>
 
 </body>
+
 </html>
