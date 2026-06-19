@@ -1,31 +1,115 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍱 Food Library</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>🎡 Meal Roulette</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-    <div class="container">
+<div class="sidebar-layout">
 
-        <h1>🍱 Food Library</h1>
+    <aside class="sidebar">
 
-        <input
-            type="text"
-            id="searchFood"
-            placeholder="🔍 ค้นหาเมนูอาหาร..."
-        >
+        <div class="logo">
 
-        <div id="foods"></div>
+            🎀 Kitty Planner
 
-    </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase.js"></script>
-    <script src="app.js"></script>
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="foods.html">
+                🍱 Foods
+            </a>
+
+            <a href="planner.html">
+                📅 Planner
+            </a>
+
+            <a href="roulette.html" class="active">
+                🎡 Roulette
+            </a>
+
+            <a href="weight.html">
+                ⚖ Weight
+            </a>
+
+            <a href="tdee.html">
+                🔥 TDEE
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="page-content">
+
+        <h1>
+
+            🎡 Meal Roulette
+
+        </h1>
+
+        <p class="welcome">
+
+            สุ่มเมนูอาหารจาก Food Library
+
+        </p>
+
+        <div class="section-card">
+
+            <h2>
+
+                🎲 สุ่มเมนู
+
+            </h2>
+
+            <button id="spinButton">
+
+                🎡 Spin
+
+            </button>
+
+        </div>
+
+        <div id="rouletteResult">
+
+            <div class="empty-card">
+
+                กดปุ่มเพื่อสุ่มอาหาร
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="roulette.js"></script>
 
 </body>
+
 </html>
