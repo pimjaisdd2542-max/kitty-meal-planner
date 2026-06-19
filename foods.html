@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🍱 Foods</title>
 
-<link rel="stylesheet" href="style.css">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>🍱 Food Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
 <div class="sidebar-layout">
@@ -14,75 +21,218 @@
     <aside class="sidebar">
 
         <div class="logo">
+
             🎀 Kitty Planner
+
         </div>
 
         <nav class="menu">
+
             <a href="index.html">🏠 Dashboard</a>
-            <a href="foods.html">🍱 Foods</a>
+
+            <a href="foods.html" class="active">🍱 Foods</a>
+
             <a href="planner.html">📅 Planner</a>
-            <a href="settings.html">⚙️ Settings</a>
+
+            <a href="roulette.html">🎡 Roulette</a>
+
+            <a href="weight.html">⚖ Weight</a>
+
+            <a href="tdee.html">🔥 TDEE</a>
+
+            <a href="settings.html">⚙ Settings</a>
+
         </nav>
 
     </aside>
 
+
     <main class="page-content">
 
-        <h1 class="page-title">
+        <h1>
+
             🍱 Food Library
+
         </h1>
 
-        <input
-            type="text"
-            id="searchFood"
-            placeholder="🔍 ค้นหาเมนูอาหาร..."
-        >
+        <p class="welcome">
 
-        <div class="add-food-card">
+            จัดการคลังอาหารของคุณ
 
-    <h2>➕ เพิ่มเมนูอาหาร</h2>
+        </p>
 
-    <div class="form-grid">
 
-        <input id="foodName" placeholder="ชื่ออาหาร">
+        <!-- ========================= -->
+        <!-- SEARCH -->
+        <!-- ========================= -->
 
-        <input id="foodCalories" type="number" placeholder="Calories">
+        <div class="section-card">
 
-        <input id="foodProtein" type="number" placeholder="Protein">
+            <input
+                type="text"
+                id="searchFood"
+                placeholder="🔍 ค้นหาชื่ออาหาร">
 
-        <input id="foodCarb" type="number" placeholder="Carb">
+        </div>
 
-        <input id="foodFat" type="number" placeholder="Fat">
 
-        <input id="foodCategory" placeholder="Category">
+        <!-- ========================= -->
+        <!-- FILTER -->
+        <!-- ========================= -->
 
-        <input id="foodMealType" placeholder="Meal Type">
+        <div class="section-card">
 
-        <input id="foodPrepTime" placeholder="Prep Time">
+            <div class="filter-row">
 
-        <input id="foodDifficulty" placeholder="Difficulty">
+                <select id="categoryFilter">
 
-        <input id="foodImage" type="file">
+                    <option value="all">
 
-    </div>
+                        📂 ทุกหมวดหมู่
 
-    <button
-        class="primary-btn"
-        onclick="addFood()">
-        Save Food
-    </button>
+                    </option>
 
-</div>
+                </select>
 
-<div id="foods"></div>
+
+                <select id="favoriteFilter">
+
+                    <option value="all">
+
+                        ⭐ ทั้งหมด
+
+                    </option>
+
+                    <option value="favorite">
+
+                        ❤️ Favorite
+
+                    </option>
+
+                    <option value="normal">
+
+                        🤍 ไม่ Favorite
+
+                    </option>
+
+                </select>
+
+
+                <select id="sortFood">
+
+                    <option value="name">
+
+                        🔤 ชื่อ
+
+                    </option>
+
+                    <option value="calories">
+
+                        🔥 Calories
+
+                    </option>
+
+                    <option value="protein">
+
+                        💪 Protein
+
+                    </option>
+
+                    <option value="category">
+
+                        📂 Category
+
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ADD FOOD -->
+        <!-- ========================= -->
+
+        <div class="section-card">
+
+            <h2>
+
+                ➕ เพิ่มเมนูใหม่
+
+            </h2>
+
+            <input
+                id="foodName"
+                type="text"
+                placeholder="ชื่ออาหาร">
+
+
+            <input
+                id="foodCategory"
+                type="text"
+                placeholder="Category">
+
+
+            <input
+                id="foodCalories"
+                type="number"
+                placeholder="Calories">
+
+
+            <input
+                id="foodProtein"
+                type="number"
+                placeholder="Protein">
+
+
+            <input
+                id="foodCarb"
+                type="number"
+                placeholder="Carb">
+
+
+            <input
+                id="foodFat"
+                type="number"
+                placeholder="Fat">
+
+
+            <input
+                id="foodImage"
+                type="text"
+                placeholder="Image URL">
+
+
+            <button id="addFoodButton">
+
+                ➕ เพิ่มอาหาร
+
+            </button>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- FOOD LIST -->
+        <!-- ========================= -->
+
+        <div
+            id="foods"
+            class="food-grid">
+
+        </div>
 
     </main>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="supabase.js"></script>
 <script src="foods.js"></script>
 
 </body>
+
 </html>
