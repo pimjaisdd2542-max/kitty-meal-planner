@@ -297,18 +297,12 @@ async function addToPlanner(foodId){
     const { error } = await supabaseClient
         .from("meal_plans")
         .insert([
-
-            {
-
-                plan_date: today,
-
-                meal: "Dinner",
-
-                food_id: foodId
-
-            }
-
-        ]);
+    {
+        plan_date: today,
+        meal_type: "Dinner",
+        food_id: foodId
+    }
+]);
 
     if(error){
 
