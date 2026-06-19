@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="th">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>⚙ Settings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar-layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            🎀 Kitty Planner
+
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="foods.html">
+                🍱 Foods
+            </a>
+
+            <a href="planner.html">
+                📅 Planner
+            </a>
+
+            <a href="roulette.html">
+                🎡 Roulette
+            </a>
+
+            <a href="weight.html">
+                ⚖ Weight
+            </a>
+
+            <a href="tdee.html">
+                🔥 TDEE
+            </a>
+
+            <a href="settings.html" class="active">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="page-content">
+
+        <h1>
+
+            ⚙ Settings
+
+        </h1>
+
+        <p class="welcome">
+
+            ตั้งค่าข้อมูลส่วนตัวและเป้าหมายของคุณ
+
+        </p>
+
+        <!-- Personal -->
+
+        <div class="section-card">
+
+            <h2>
+
+                👤 ข้อมูลส่วนตัว
+
+            </h2>
+
+            <label>ชื่อ</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="ชื่อ">
+
+            <label>เพศ</label>
+
+            <select id="gender">
+
+                <option value="female">หญิง</option>
+
+                <option value="male">ชาย</option>
+
+            </select>
+
+            <label>อายุ</label>
+
+            <input
+                type="number"
+                id="age">
+
+            <label>ส่วนสูง (cm)</label>
+
+            <input
+                type="number"
+                id="height">
+
+        </div>
+
+        <!-- Goals -->
+
+        <div class="section-card">
+
+            <h2>
+
+                🎯 เป้าหมาย
+
+            </h2>
+
+            <label>Calories Goal</label>
+
+            <input
+                type="number"
+                id="calorieGoal">
+
+            <label>Protein Goal (g)</label>
+
+            <input
+                type="number"
+                id="proteinGoal">
+
+            <label>Carb Goal (g)</label>
+
+            <input
+                type="number"
+                id="carbGoal">
+
+            <label>Fat Goal (g)</label>
+
+            <input
+                type="number"
+                id="fatGoal">
+
+            <label>Water Goal (ml)</label>
+
+            <input
+                type="number"
+                id="waterGoal">
+
+        </div>
+
+        <!-- Save -->
+
+        <div class="section-card text-center">
+
+            <button id="saveSettings">
+
+                💾 บันทึกการตั้งค่า
+
+            </button>
+
+        </div>
+
+        <!-- Summary -->
+
+        <div class="section-card">
+
+            <h2>
+
+                📊 สรุปข้อมูล
+
+            </h2>
+
+            <div id="settingsSummary">
+
+                ยังไม่มีข้อมูล
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase.js"></script>
+
+<script src="settings.js"></script>
+
+</body>
+
+</html>
